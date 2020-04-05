@@ -1,3 +1,5 @@
+static const unsigned int gappx     = 40;        /* gaps between windows */
+
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
