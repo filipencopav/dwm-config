@@ -72,7 +72,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *mpdcmd[] = { "mpc", "toggle", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
 static const char *lockcmd[] = { "i3lock_script", NULL };
-static const char *screenshotcmd[] = { "scrot", "-e", "'mv", "$f", "$HOME/pix/screenshots/'", NULL };
+static const char *screenshotcmd[] = { "scrot", "-e", "mv $f $HOME/pix/screenshots/", NULL };
 
 
 static Key keys[] = {
@@ -81,7 +81,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = jmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_x,      spawn,          {.v = lockcmd } },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = lockcmd } },
 	{ MODKEY,                       XK_Print,  spawn,          {.v = screenshotcmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
