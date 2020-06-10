@@ -12,19 +12,18 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = {
 	"Siji:size=13:antialias=false",
-	"Dina:pixelsize=16:antialias=false"
+	"JetBrains Mono:pixelsize=14:antialias=true"
 };
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#888888";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_bg[]          = "#1E1E1E";
-static const char col_orange[]      = "#cf6a4c";
-static const char col_cyan[]        = "#005577";
+static const char norm_bg[]      = "#1E1E1E";
+static const char sel_bg[]       = "#1E1E1E";
+static const char sel_border[]   = "#8F9D6A";
+static const char norm_border[]  = "#1E1E1E";
+static const char norm_fg[]      = "#C09F6A";
+static const char sel_fg[]       = "#D2BA82";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_bg,    col_bg },
-	[SchemeSel]  = { col_gray4, col_bg,    col_orange },
+	[SchemeNorm] = { norm_fg,   norm_bg,   norm_border },
+	[SchemeSel]  = { sel_fg,    sel_bg,    sel_border },
 };
 
 /* tagging */
@@ -73,8 +72,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *mpdcmd[] = { "mpc", "toggle", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
 static const char *lockcmd[] = { "i3lock_script", NULL };
-static const char *screenshotcmd[] = { "scrot", "-e", "mv $f $HOME/pix/screenshots/", NULL };
-
+static const char *screenshotcmd[] = { "screenshot", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -83,7 +81,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_a,      spawn,          {.v = jmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = lockcmd } },
-	{ MODKEY,                       XK_Print,  spawn,          {.v = screenshotcmd} },
+	{ 0,                            XK_Print,  spawn,          {.v = screenshotcmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
