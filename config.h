@@ -14,12 +14,12 @@ static const char *fonts[] = {
 	"Siji:size=13:antialias=false",
 	"JetBrains Mono:pixelsize=14:antialias=true"
 };
-static const char norm_bg[]      = "#1E1E1E";
-static const char sel_bg[]       = "#1E1E1E";
-static const char sel_border[]   = "#8F9D6A";
-static const char norm_border[]  = "#1E1E1E";
-static const char norm_fg[]      = "#C09F6A";
-static const char sel_fg[]       = "#D2BA82";
+static const char norm_bg[]      = "#1d1d1d";
+static const char sel_bg[]       = "#1d1d1d";
+static const char sel_border[]   = "#B8B8B8";
+static const char norm_border[]  = "#101010";
+static const char norm_fg[]      = "#747474";
+static const char sel_fg[]       = "#A0A0A0";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { norm_fg,   norm_bg,   norm_border },
