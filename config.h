@@ -12,15 +12,17 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = {
 	"Siji:size=13:antialias=false",
-	"JetBrains Mono:pixelsize=14:antialias=true"
+	"Terminus:pixelsize=14:antialias=false"
 };
-static const char norm_bg[]      = "#1d1d1d";
-static const char sel_bg[]       = "#1d1d1d";
-static const char sel_border[]   = "#B8B8B8";
-static const char norm_border[]  = "#101010";
-static const char norm_fg[]      = "#747474";
-static const char sel_fg[]       = "#A0A0A0";
-static const char *colors[][3]      = {
+static const char norm_bg[]      = "#282828";
+static const char sel_bg[]       = "#282828";
+static const char norm_border[]  = "#32302f";
+
+static const char norm_fg[]      = "#a89984";
+static const char sel_border[]   = "#8ec07c";
+static const char sel_fg[]       = "#fbf1c7";
+
+static const char *colors[][3]   = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { norm_fg,   norm_bg,   norm_border },
 	[SchemeSel]  = { sel_fg,    sel_bg,    sel_border },
@@ -73,7 +75,6 @@ static const char *jmenucmd[] = { "j4-dmenu-desktop", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *mpdcmd[] = { "mpc", "toggle", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
-static const char *lockcmd[] = { "i3lock_script", NULL };
 static const char *screenshotcmd[] = { "screenshot", NULL };
 
 static Key keys[] = {
@@ -82,7 +83,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = jmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = lockcmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = screenshotcmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
