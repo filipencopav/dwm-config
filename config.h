@@ -11,8 +11,8 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = {
-	"Siji:size=13:antialias=false",
-	"Terminus:pixelsize=14:antialias=false"
+	"Siji:size=11:antialias=false",
+	"Terminus:pixelsize=12:antialias=false"
 };
 static const char norm_bg[]      = "#282828";
 static const char sel_bg[]       = "#282828";
