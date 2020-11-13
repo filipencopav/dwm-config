@@ -14,8 +14,8 @@ static const char *fonts[] = {
 	"Siji:size=11:antialias=false",
 	"Terminus:pixelsize=12:antialias=false"
 };
-static const char norm_bg[]      = "#282828";
-static const char sel_bg[]       = "#282828";
+static const char norm_bg[]      = "#1D2021";
+static const char sel_bg[]       = "#1D2021";
 static const char norm_border[]  = "#32302f";
 
 static const char norm_fg[]      = "#a89984";
