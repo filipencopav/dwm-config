@@ -9,18 +9,18 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[] = {
 	"Siji:size=11:antialias=false",
 	"Terminus:pixelsize=12:antialias=false"
 };
 static const char norm_bg[]      = "#1D2021";
-static const char sel_bg[]       = "#1D2021";
+static const char sel_bg[]       = "#282828";
 static const char norm_border[]  = "#32302f";
 
 static const char norm_fg[]      = "#a89984";
 static const char sel_border[]   = "#8ec07c";
-static const char sel_fg[]       = "#fbf1c7";
+static const char sel_fg[]       = "#FB4934";
 
 static const char *colors[][3]   = {
 	/*               fg         bg         border   */
