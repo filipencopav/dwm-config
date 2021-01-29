@@ -12,7 +12,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[] = {
 	"Siji:size=11:antialias=false",
-	"Terminus:pixelsize=12:antialias=false"
+	"xos4 Terminus:size=9:antialias=false"
 };
 static const char norm_bg[]      = "#1D2021";
 static const char sel_bg[]       = "#282828";
@@ -36,17 +36,18 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "firefox",  NULL,       NULL,       2,            0,           -1 },
-	{ "discord",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Gimp",     NULL,       NULL,       1 << 3,       0,           -1 },
-	{ "UnityHub", NULL,       NULL,       1 << 5,       1,           -1 },
-	{ "Unity",    NULL,       NULL,       1 << 5,       0,           -1 },
-	{ "Lingot",   NULL,       NULL,       0,            1,           -1 },
+	/* class                instance    title       tags mask     isfloating   monitor */
+	{ "firefox",            NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "discord",            NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Gimp",               NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "UnityHub",           NULL,       NULL,       1 << 5,       1,           -1 },
+	{ "Unity",              NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "Lingot",             NULL,       NULL,       0,            1,           -1 },
+	{ "TelegramDesktop",    NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.3;  /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.35; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -72,7 +73,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *jmenucmd[] = { "j4-dmenu-desktop", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "urxvtc", NULL };
 static const char *mpdcmd[] = { "mpc", "toggle", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
 static const char *screenshotcmd[] = { "screenshot", NULL };
@@ -132,3 +133,5 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
+/* vim: set noexpandtab tw=4 sw=4: */
