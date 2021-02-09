@@ -38,12 +38,11 @@ static const Rule rules[] = {
 	 */
 	/* class		instance	title	tags mask	isfloating	monitor */
 	{ "firefox",		NULL,		NULL,	1 << 3,		0,		-1 },
-	{ "discord",		NULL,		NULL,	1 << 2,		0,		-1 },
-	{ "Gimp",		NULL,		NULL,	1 << 3,		0,		-1 },
+	{ "discord",		NULL,		NULL,	1 << 8,		0,		-1 },
 	{ "UnityHub",		NULL,		NULL,	1 << 5,		1,		-1 },
 	{ "Unity",		NULL,		NULL,	1 << 5,		0,		-1 },
 	{ "Lingot",		NULL,		NULL,	0,		1,		-1 },
-	{ "TelegramDesktop",	NULL,		NULL,	1 << 2,		0,		-1 },
+	{ "TelegramDesktop",	NULL,		NULL,	1 << 8,		0,		-1 },
 };
 
 /* layout(s) */
