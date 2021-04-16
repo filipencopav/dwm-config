@@ -29,15 +29,15 @@ static const char *colors[][3]   = {
 
 /* tagging */
 static const char *tags[] = {
-    "\u00B7",
-    "\u00B7",
-    "\u00B7",
-    "\u00B7",
-    "\u00B7",
-    "\u00B7",
-    "\u00B7",
-    "\u00B7",
-    "\u00B7"
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
+    "\u2022",
 };
 
 static const Rule rules[] = {
