@@ -84,6 +84,7 @@ static const char *termcmd[]  = { "urxvtc", NULL };
 static const char *mpdcmd[] = { "mpc", "toggle", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
 static const char *screenshotcmd[] = { "screenshot", NULL };
+static const char *maimcmd[] = { "screenshot", "-a", NULL };
 static const char *emacs_client_cmd[] = { "emacsclient", "-n", "-c", NULL };
 
 static Key keys[] = {
@@ -92,6 +93,7 @@ static Key keys[] = {
     { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { 0,                            XK_Print,  spawn,          {.v = screenshotcmd} },
+    { ShiftMask,                    XK_Print,  spawn,          {.v = maimcmd} },
     { MODKEY|ShiftMask,             XK_e,      spawn,          {.v = emacs_client_cmd} },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
