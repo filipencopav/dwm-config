@@ -13,9 +13,9 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[] = {
     "xos4 Terminus:size=9",
 };
-static const char norm_bg[]      = "#1D2021";
-static const char sel_bg[]       = "#282828";
-static const char norm_border[]  = "#32302f";
+static const char norm_bg[]      = "#282828";
+static const char sel_bg[]       = "#1D2021";
+static const char norm_border[]  = "#282828";
 
 static const char norm_fg[]      = "#a89984";
 static const char sel_border[]   = "#8ec07c";
@@ -85,6 +85,7 @@ static const char *mpdcmd[] = { "mpc", "toggle", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
 static const char *screenshotcmd[] = { "screenshot", NULL };
 static const char *maimcmd[] = { "screenshot", "-a", NULL };
+static const char *winscrotcmd[] = { "screenshot", "-f", NULL };
 static const char *emacs_client_cmd[] = { "emacsclient", "-n", "-c", NULL };
 
 static Key keys[] = {
@@ -94,6 +95,7 @@ static Key keys[] = {
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { 0,                            XK_Print,  spawn,          {.v = screenshotcmd} },
     { ShiftMask,                    XK_Print,  spawn,          {.v = maimcmd} },
+    { Mod1Mask,                     XK_Print,  spawn,          {.v = winscrotcmd} },
     { MODKEY|ShiftMask,             XK_e,      spawn,          {.v = emacs_client_cmd} },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
