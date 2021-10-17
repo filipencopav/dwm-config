@@ -83,7 +83,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
-static const char *termcmd[]  = { "urxvtc", NULL };
+static const char *termcmd[]  = { "mlterm", NULL };
 static const char *mpdcmd[] = { "mpc", "toggle", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
 static const char *screenshotcmd[] = { "screenshot", NULL };
