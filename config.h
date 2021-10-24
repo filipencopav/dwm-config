@@ -13,13 +13,13 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[] = {
     "Fantasque Sans Mono:size=12",
 };
-static const char norm_bg[]      = "#030204";
-static const char sel_bg[]       = "#030204";
-static const char norm_border[]  = "#030204";
+static const char norm_bg[]     = "#282828";
+static const char sel_bg[]      = "#32302F";
+static const char norm_border[] = "#282828";
 
-static const char norm_fg[]      = "#686868";
-static const char sel_border[]   = "#686868";
-static const char sel_fg[]       = "#dadada";
+static const char norm_fg[]     = "#BDAE83";
+static const char sel_border[]  = "#D79921";
+static const char sel_fg[]      = "#EBDBB2";
 
 static const char *colors[][3]   = {
     /*               fg         bg         border   */
