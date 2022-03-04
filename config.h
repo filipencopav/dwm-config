@@ -11,7 +11,7 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[] = {
-    "Terminus:size=12",
+    "Iosevka Term:size=12",
 };
 static const char norm_bg[]     = "#282828";
 static const char sel_bg[]      = "#32302F";
@@ -90,9 +90,15 @@ static const char *screenshotcmd[] = { "screenshot", NULL };
 static const char *maimcmd[] = { "screenshot", "-a", NULL };
 static const char *winscrotcmd[] = { "screenshot", "-f", NULL };
 static const char *emacs_client_cmd[] = { "emacsclient", "-n", "-c", NULL };
+static const char *lowervolumecmd[] = { "amixer", "sset", "Master", "-2%", NULL };
+static const char *raisevolumecmd[] = { "amixer", "sset", "Master", "+2%", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
+    { MODKEY,                       XK_bracketleft,            spawn,
+                                                               {.v = lowervolumecmd } },
+    { MODKEY,                       XK_bracketright,           spawn,
+                                                               {.v = raisevolumecmd } },
     { MODKEY,                       XK_p,      spawn,          {.v = passmenucmd } },
     { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
