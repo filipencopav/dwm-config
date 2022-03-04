@@ -90,8 +90,8 @@ static const char *screenshotcmd[] = { "screenshot", NULL };
 static const char *maimcmd[] = { "screenshot", "-a", NULL };
 static const char *winscrotcmd[] = { "screenshot", "-f", NULL };
 static const char *emacs_client_cmd[] = { "emacsclient", "-n", "-c", NULL };
-static const char *lowervolumecmd[] = { "amixer", "sset", "Master", "-2%", NULL };
-static const char *raisevolumecmd[] = { "amixer", "sset", "Master", "+2%", NULL };
+static const char *lowervolumecmd[] = { "amixer", "sset", "Master", "2%-", NULL };
+static const char *raisevolumecmd[] = { "amixer", "sset", "Master", "2%+", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
