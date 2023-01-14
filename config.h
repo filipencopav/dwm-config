@@ -46,10 +46,7 @@ static const Rule rules[] = {
      *      WM_NAME(STRING) = title
      */
     /* class                instance        title                   tags mask       isfloating      monitor */
-    { "firefox",            NULL,           NULL,                   1 << 3,         0,              -1 },
-    { "firefox",            NULL,           "Picture-in-Picture",   1 << 3,         1,              -1 },
-    { "Firefox",            NULL,           NULL,                   1 << 3,         0,              -1 },
-    { "Firefox",            NULL,           "Picture-in-Picture",   1 << 3,         1,              -1 },
+    { "chromium",           NULL,           NULL,                   1 << 3,         1,              -1 },
     { "discord",            NULL,           NULL,                   1 << 7,         0,              -1 },
     { "UnityHub",           NULL,           NULL,                   1 << 5,         1,              -1 },
     { "Unity",              NULL,           NULL,                   1 << 5,         0,              -1 },
@@ -93,12 +90,16 @@ static const char *emacs_client_cmd[] = { "emacsclient", "-n", "-c", NULL };
 static const char *lowervolumecmd[] = { "amixer", "sset", "Master", "2%-", NULL };
 static const char *raisevolumecmd[] = { "amixer", "sset", "Master", "2%+", NULL };
 
+void nop(const Arg* arg) { return; }
+
 static Key keys[] = {
     /* modifier                     key        function        argument */
-    { MODKEY,                       XK_bracketleft,            spawn,
-                                                               {.v = lowervolumecmd } },
-    { MODKEY,                       XK_bracketright,           spawn,
-                                                               {.v = raisevolumecmd } },
+    { Mod1Mask,                     XK_Caps_Lock,
+                                               nop,            {0} },
+    { MODKEY,                       XK_bracketleft,
+                                               spawn,          {.v = lowervolumecmd } },
+    { MODKEY,                       XK_bracketright,
+                                               spawn,          {.v = raisevolumecmd } },
     { MODKEY,                       XK_p,      spawn,          {.v = passmenucmd } },
     { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
