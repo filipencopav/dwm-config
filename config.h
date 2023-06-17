@@ -47,7 +47,9 @@ static const Rule rules[] = {
      */
     /* class                instance        title                   tags mask       isfloating      monitor */
     { "Chromium",           NULL,           NULL,                   1 << 3,         0,              -1 },
-    { "discord",            NULL,           NULL,                   1 << 7,         0,              -1 },
+    { "ripcord",            NULL,           NULL,                   1 << 7,         0,              -1 },
+    { "ripcord",            NULL,           "Emoji",                0,              1,              -1 },
+    { "ripcord",            NULL,           "Ripcord Voice Chat",   0,              1,              -1 },
     { "UnityHub",           NULL,           NULL,                   1 << 5,         1,              -1 },
     { "Unity",              NULL,           NULL,                   1 << 5,         0,              -1 },
     { "Lingot",             NULL,           NULL,                   0,              1,              -1 },
@@ -108,9 +110,9 @@ static Key keys[] = {
     { Mod1Mask,                     XK_Print,  spawn,          {.v = winscrotcmd} },
     { MODKEY|ShiftMask,             XK_e,      spawn,          {.v = emacs_client_cmd} },
     { MODKEY,                       XK_b,      togglebar,      {0} },
-    { MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
+    { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
-    { MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
+    { MODKEY|ShiftMask,             XK_j,      setmfact,       {.f = -0.05} },
     { MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
     { MODKEY,                       XK_s,      zoom,           {0} },
     { MODKEY,                       XK_Tab,    view,           {0} },
