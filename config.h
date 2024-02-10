@@ -11,7 +11,7 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[] = {
-	"xos4 Terminus:pixelsize=14:antialias=false:hinting=false",
+	"Terminus:pixelsize=14:antialias=false:hinting=false",
 };
 static const char norm_bg[]     = "#282828";
 static const char sel_bg[]      = "#32302F";
